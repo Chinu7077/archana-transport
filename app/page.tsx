@@ -13,10 +13,12 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ImageSlider from "..//components/ImageSlider";
+import FestivalPopup from "./festival/festival";
 
 export default function Home() {
   return (
     <>
+    <FestivalPopup/>
       {/* Hero Section */}
       <section 
   className="relative bg-primary py-20 md:py-28 bg-cover bg-center" 
