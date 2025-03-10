@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Video() {
-  const [videoSrc, setVideoSrc] = useState("/0310.MP4");
+  const [videoSrc, setVideoSrc] = useState("/0310.mp4");
 
   return (
     <div className="relative w-full flex justify-center items-center bg-gray-900">
