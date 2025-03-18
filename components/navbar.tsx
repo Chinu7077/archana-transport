@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X, Truck } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X, Truck } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -24,20 +24,35 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
-          <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="/"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Home
           </Link>
-          <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="/about"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             About Us
           </Link>
-          <Link href="/services" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="/services"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Services
           </Link>
-          
-          <Link href="/biocycle" className="text-sm font-medium hover:text-primary transition-colors">
+
+          <Link
+            href="/biocycle"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Biocycle
           </Link>
-          <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="/contact"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Contact
           </Link>
         </nav>
@@ -49,8 +64,17 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden"
+          onClick={toggleMenu}
+        >
+          {isMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
           <span className="sr-only">Toggle menu</span>
         </Button>
       </div>
@@ -59,7 +83,11 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="container md:hidden py-4 bg-background">
           <nav className="flex flex-col space-y-4">
-            <Link href="/" className="text-sm font-medium hover:text-primary transition-colors" onClick={toggleMenu}>
+            <Link
+              href="/"
+              className="text-sm font-medium hover:text-primary transition-colors"
+              onClick={toggleMenu}
+            >
               Home
             </Link>
             <Link
@@ -76,13 +104,7 @@ export default function Navbar() {
             >
               Services
             </Link>
-            <Link
-              href="/fleet"
-              className="text-sm font-medium hover:text-primary transition-colors"
-              onClick={toggleMenu}
-            >
-              Our Fleet
-            </Link>
+
             <Link
               href="/biocycle"
               className="text-sm font-medium hover:text-primary transition-colors"
@@ -106,6 +128,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
-  )
+  );
 }
-

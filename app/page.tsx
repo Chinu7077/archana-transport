@@ -18,7 +18,8 @@ import FestivalPopup from "./festival/festival";
 export default function Home() {
   return (
     <>
-    <FestivalPopup/>
+{/* <FestivalPopup /> */}
+
       {/* Hero Section */}
       <section 
   className="relative bg-primary py-20 md:py-28 bg-cover bg-center" 
